@@ -1,0 +1,12 @@
+<template name='profil'>
+    {{#if user.username}}
+        <section class="profil">
+            <header class="profil--header">
+                <h1>{{user.username}} ({{user.date}})</h1>
+                <p>{{user.profil.bio}}</p>
+            </header>
+        </section>
+    {{else}}
+        User not found
+	{{/if}}
+</template>

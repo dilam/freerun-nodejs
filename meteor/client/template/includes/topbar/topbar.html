@@ -1,0 +1,46 @@
+<template name="topbar">
+    <section class="topbar">
+        <div class="topbar__logo">
+            F R E E R U N
+        </div>
+        <div class="topbar__nav">
+            <a href="{{pathFor route='main'}}">
+                <div class="topbar__nav--item">
+                    Accueil
+                </div>
+            </a>
+            <a href="/game">
+                <div class="topbar__nav--item">
+                    Le Jeu
+                </div>
+            </a>
+            <a href="/team">
+                <div class="topbar__nav--item">
+                    L'Equipe
+                </div>
+            </a>
+            <a href="/#download">
+                <div class="topbar__nav--item">
+                    Télécharger
+                </div>
+            </a>
+            <a href="{{pathFor route='contact'}}">
+                <div class="topbar__nav--item">
+                    Contact
+                </div>
+            </a>
+        </div>
+        <div class="topbar__user">
+            <div class="topbar__user--item">
+                <a href="{{pathFor route='highscore'}}" title="Classement"><i class="ion-trophy"></i></a>
+            </div>
+            <div class="topbar__user--item">
+              {{#if currentUser}}
+                <a href="#" title="Se déconnecter" class="logout"><i class="ion-log-out"></i></a>
+              {{else}}
+                <a href="{{pathFor route='login'}}" title="Se connecter"><i class="ion-log-in"></i></a>
+              {{/if}}
+            </div>
+        </div>
+    </section>
+</template>

@@ -1,0 +1,10 @@
+<template name="highscore">
+    <section class="highscore">
+        <h1>Highscore</h1>
+        <ol>
+          {{ #each scores }}
+            <li>{{ username }} | {{ score }}</li>
+           {{ /each }}
+        </ol>
+    </section>
+</template>

@@ -1,0 +1,16 @@
+<template name='login'>
+    {{#unless currentUser}}
+    	<div class="login">
+            <h1>Se connecter</h1><br/>
+            Pas encore de compte? <a href="{{pathFor route='signup'}}">Inscris-toi!</a><br/>
+            {{error.general}}
+          <form class="login--form">
+                {{error.username}}
+    	          <input type="text" name="username" placeholder="Nom d'utilisateur" id="username">
+                {{error.password}}
+                <input type="password" name="password" placeholder="Mot de passe" id="password">
+                <button type="submit" class="login__password">Connexion</button>
+    	    </form>
+    	</div>
+    {{/unless}}
+</template>
