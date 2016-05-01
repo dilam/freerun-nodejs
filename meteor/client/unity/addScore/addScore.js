@@ -6,4 +6,6 @@ Template.addScore.onCreated(function () {
         "username" : username,
         "score"    : score
     });
+
+    Router.go('/highscore');
 });
