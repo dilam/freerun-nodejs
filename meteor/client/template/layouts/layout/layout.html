@@ -1,7 +1,11 @@
 <template name='layout'>
         {{> topbar}}
-        <section class="content">
+      <section class="content">
             {{> yield}}
-        </section>
+      </section>
+      <button id="displayChatButton" class="displayChatButton"><i class="ion-chatbubbles"></i></button>
+      <div class="displayChat">
+        {{> chat}}
+      </div>
         {{> footer}}
 </template>

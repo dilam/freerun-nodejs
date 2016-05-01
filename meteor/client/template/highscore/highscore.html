@@ -3,7 +3,14 @@
         <h1>Highscore</h1>
         <ol>
           {{ #each scores }}
-            <li>{{ username }} | {{ score }}</li>
+            <li>
+                <div class="highscore--username">
+                  {{ username }}
+                </div>
+                <div class="highscore--score">
+                  {{ score }}
+                </div>
+            </li>
            {{ /each }}
         </ol>
     </section>

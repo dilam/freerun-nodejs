@@ -1,0 +1,25 @@
+<template name="chat">
+    <section class="chat">
+        <form class="chat--form">
+            <input type="text" name="message" id="message" placeholder="Message" />
+            <button type="submit"><i class="ion-paper-airplane"></i></button>
+        </form>
+        <div class="chat__display">
+          {{#each chat}}
+            <div class="chat__display--item">
+                <div class="chat__display--item__top">
+                    <div class="chat__display--item__top--username">
+                      {{username}}
+                    </div>
+                    <div class="chat__display--item__top--date">
+                      {{Time createdAt}}
+                    </div>
+                </div>
+                <div class="chat__display--item__bottom">
+                  {{message}}
+                </div>
+            </div>
+          {{/each}}
+        </div>
+    </section>
+</template>
